@@ -8,6 +8,19 @@
     <meta property="og:title" content="J3 Legacy Technology Solutions — Veteran-Owned MSP" />
     <meta property="og:description" content="Local, veteran-owned IT partner for Central Florida small businesses. Honest recommendations, no unnecessary upsells." />
     <meta property="og:type" content="website" />
+    <!-- GitHub Pages SPA routing fix -->
+    <script>
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet" />
